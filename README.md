@@ -1,71 +1,73 @@
-🚀 Full-Stack Portfolio Generator (MERN + Docker)
+---
 
-This project is a full-stack portfolio generator built using Node.js, Express, MongoDB, and Docker, where users can generate and store portfolio data that is fetched dynamically from a backend API and persisted in a MongoDB database.
+# 🚀 Full-Stack Portfolio Generator (MERN + Docker)
 
-The backend and database are fully containerized using Docker and Docker Compose, allowing the entire backend stack to be started with a single command.
+This project is a **full-stack portfolio generator** built using **Node.js, Express, MongoDB, and Docker**, where users can generate and store portfolio data that is fetched dynamically from a backend API and persisted in a MongoDB database.
 
-🧠 What This Project Does
+The backend and database are fully **containerized using Docker and Docker Compose**, allowing the entire backend stack to be started with a single command.
 
-Accepts portfolio data from the frontend UI
+---
 
-Sends data to a Node.js + Express backend
+## 🧠 What This Project Does
 
-Stores portfolio information in MongoDB using Mongoose
-
-Fetches and displays stored portfolio data dynamically
-
-Runs backend and database inside Docker containers
+* Accepts portfolio data from the frontend UI
+* Sends data to a Node.js + Express backend
+* Stores portfolio information in MongoDB using Mongoose
+* Fetches and displays stored portfolio data dynamically
+* Runs backend and database inside Docker containers
 
 In short:
-UI → Backend → MongoDB → Backend → UI
+**UI → Backend → MongoDB → Backend → UI**
 (yes, it actually works — not a tutorial illusion)
 
-🛠️ Tech Stack
-Backend
+---
 
-Node.js
+## 🛠️ Tech Stack
 
-Express.js
+### Backend
 
-MongoDB
+* **Node.js**
+* **Express.js**
+* **MongoDB**
+* **Mongoose**
 
-Mongoose
+### DevOps / Infrastructure
 
-DevOps / Infrastructure
+* **Docker**
+* **Docker Compose**
+* MongoDB official Docker image
 
-Docker
+### Frontend
 
-Docker Compose
+* HTML, CSS, JavaScript
+  (frontend currently runs separately outside Docker)
 
-MongoDB official Docker image
+---
 
-Frontend
+## 🐳 Docker Setup (Backend + Database)
 
-HTML, CSS, JavaScript
-(frontend currently runs separately outside Docker)
+The project uses **Docker Compose** to orchestrate:
 
-🐳 Docker Setup (Backend + Database)
-
-The project uses Docker Compose to orchestrate:
-
-A backend container (Node.js + Express)
-
-A MongoDB container with persistent volumes
+* A backend container (Node.js + Express)
+* A MongoDB container with persistent volumes
 
 Both services can be started together using a single command:
 
+```bash
 docker-compose up --build
-
+```
 
 This ensures:
 
-Consistent environment
+* Consistent environment
+* No local MongoDB installation required
+* Clean startup and teardown of services
 
-No local MongoDB installation required
+---
 
-Clean startup and teardown of services
+## 📁 Project Structure
 
-📁 Project Structure
+```
 WPL proj/
 │
 ├── docker-compose.yaml
@@ -78,8 +80,11 @@ WPL proj/
 │
 └── portfolio-frontend/
     └── (static frontend files)
+```
 
-🟢 Current Status
+---
+
+## 🟢 Current Status
 
 ✅ Backend fully Dockerized
 ✅ MongoDB containerized with persistent storage
@@ -87,31 +92,33 @@ WPL proj/
 ✅ Data successfully saved and fetched from MongoDB
 ⚠️ Frontend not yet containerized (planned)
 
-🔮 Planned Improvements
+---
 
-Dockerize frontend and include it in Docker Compose
+## 🔮 Planned Improvements
 
-Environment variable support using .env
+* Dockerize frontend and include it in Docker Compose
+* Environment variable support using `.env`
+* Improved API validation and error handling
+* Production-ready Nginx setup
+* Deployment to cloud (AWS / Azure / GCP)
 
-Improved API validation and error handling
+---
 
-Production-ready Nginx setup
-
-Deployment to cloud (AWS / Azure / GCP)
-
-💡 Why This Project?
+## 💡 Why This Project?
 
 This project was built to:
 
-Understand real backend–database communication
+* Understand real backend–database communication
+* Learn Docker and Docker Compose in a **real-world scenario**
+* Avoid “hello world” DevOps setups
+* Build a scalable full-stack foundation
 
-Learn Docker and Docker Compose in a real-world scenario
+---
 
-Avoid “hello world” DevOps setups
+## 🧑‍💻 Author
 
-Build a scalable full-stack foundation
-
-🧑‍💻 Author
-
-Built by Mayur Joshi
+Built by **Mayur Joshi**
 (With patience, debugging stamina, and way too many Docker rebuilds)
+
+---
+
