@@ -1,6 +1,6 @@
 ---
 
-# 🚀 Full-Stack Portfolio Generator (MERN + Docker)
+# 🚀 Full-Stack Portfolio Generator (Based on Docker)
 
 This project is a **full-stack portfolio generator** built using **Node.js, Express, MongoDB, and Docker**, where users can generate and store portfolio data that is fetched dynamically from a backend API and persisted in a MongoDB database.
 
